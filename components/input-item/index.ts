@@ -27,9 +27,11 @@ Component({
   },
   data: {
     _focus: false,
+    _native: false,
   },
   didMount() {
     this.setData({
+      _native: this.renderer === 'native',
       _focus: this.props.focus,
     });
   },
