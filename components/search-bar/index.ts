@@ -7,9 +7,11 @@ Component({
   data: {
     _value: '',
     focus: false,
+    _native: false,
   },
   didMount() {
     this.setData({
+      _native: this.renderer === 'native',
       _value: ('value' in this.props) ? this.props.value : '',
       focus: this.props.focus,
     });

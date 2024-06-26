@@ -21,10 +21,12 @@ Component({
     autoplay: false,
     animation: false,
     version: my.SDKVersion,
+    _native: false,
   },
   didMount() {
     const { tabs, animation } = this.props;
     this.setData({
+      _native: this.renderer === 'native',
       tabWidth: tabs.length > 3 ? 0.25 : 1 / tabs.length,
       animation,
       autoplay: true,

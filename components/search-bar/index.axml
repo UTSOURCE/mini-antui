@@ -19,7 +19,7 @@
       onConfirm="handleConfirm"
       sync-input="{{true}}"
       onBlur="handleBlur" />
-    <view class="am-search-clear {{ _value.length > 0 && focus ? 'am-search-clear-show' : '' }}" onTap="handleClear">
+    <view class="am-search-clear {{ _value.length > 0 && (focus || _native) ? 'am-search-clear-show' : '' }}" onTap="handleClear">
       <icon type="clear" size="14" />
     </view>
   </view>
